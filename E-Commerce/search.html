@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopify</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+            integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <style>
+            body {
+                padding-top: 50px;
+            }
+
+            .search-container {
+                margin: 20px auto;
+                max-width: 600px;
+            }
+
+            .results {
+                margin-top: 20px;
+            }
+
+            .result-item {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .result-item img {
+                width: 100px;
+                height: auto;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+                 <section class="header_menu" id="header_menu" style="background-color: rgb(206, 195, 195);">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="color: rgb(182, 194, 129);">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="index.html"><img src="main_logo.png" alt="main_logo" style="width: 120px; height: 60px;"></a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="product.html">Product</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="category.html">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <form class="form-inline" action="search.html" method="GET">
+                                <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search"
+                                    aria-label="Search">
+                                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            </form>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </section>
+         
+
+        <div class="container">
+            <div class="search-container text-center">
+                <h1>Search Results</h1>
+                <input type="text" id="searchInput" class="form-control" placeholder="Search for items...">
+            </div>
+            <div class="results" id="results">
+                 
+            </div>
+        </div>
+
+        <section class="footer_section pt-5 pb-2" id="footer_section">
+            <footer>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-3 col-6 pl-5 pl-small-15">
+                            <div class="footer_title">
+                                <a href="index.html">
+                                    <img src="main_logo.png" width="150px" class="img img-fluid" alt="logo">
+                                </a>
+                            </div>
+                            <div>
+                                Shopify is an online clothing store that offers a diverse selection of fashion items. They
+                                provide everything from stylish dresses to trendy accessories, ensuring both quality and
+                                style.
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title pt-3 mb-3">
+                                <h3 style="color: yellow;">Quick Links</h3>
+                            </div>
+                            <div class="footer_links">
+                                <ul>
+                                    <li><button><a href="about.html">About</a></button></li>
+                                    <li><button id="offer_confirm"><a href="javascript:;">Offers & Discounts</a></button>
+                                    </li>
+                                    <li><button id="coupon_confirm"><a href="javascript:;">Get Coupon</a></button></li>
+                                    <li><button><a href="contact.html">Contact Us</a></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title pt-3 mb-3">
+                                <h3 style="color: yellow;">New Products</h3>
+                            </div>
+                            <div class="footer_links">
+                                <ul>
+                                    <li><a href="category2.html">Woman Cloth</a></li>
+                                    <li><a href="category1.html">Mens Cloth</a></li>
+                                    <li><a href="category4.html">Kids Cloth</a></li>
+                                    <li><a href="category3.html">Ethnic Cloth</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="footer_title pt-3 mb-3">
+                                <h3 style="color: yellow;">Support</h3>
+                            </div>
+                            <div class="footer_links">
+                                <ul>
+                                    <li><a href="javascript:;">Frequently Asked Questions</a></li>
+                                    <li><a href="javascript:;">Terms & Conditions</a></li>
+                                    <li><a href="javascript:;">Privacy Policy</a></li>
+                                    <li><a href="javascript:;">Report a Payment Issue</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-top">
+                    <h6 class="text-center mt-3">Copyright ©2024 All rights reserved</h6>
+                </div>
+            </footer>
+        </section>
+
+
+
+         
+        <button onclick="topFunction()" id="scrollToTopBtn" title="Go to top">Top</button>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="scripts.js"></script>
+
+        <script>
+            const products = [
+                { name: "Lymio Casual Shirt for Men", category: "Shirts", image: "product1.jpg", price: "₹349", url: "product_detail1.html" },
+                { name: "MAYPRA Men Tailored Fit Self Design Spread Collar Casual Shirt", category: "Shirts", image: "product4.jpg", price: "₹699", url: "product_detail4.html" },
+                { name: "KISAH Men's Black Indian Ethnic WEAR Kurta for Wedding & Festivals", category: "Shirts", image: "product6.jpg", price: "₹1711", url: "product_detail6.html" },
+                { name: "Leriya Fashion Dress for Women Midi", category: "Dress", image: "product2.jpg", price: "₹479", url: "product_detail2.html" },
+                { name: "FOXDX Women's Georgette Solid Ankle Length 3/4 Sleeve Anarkali Gown Set with Floral Embroidered Dupatta Set", category: "Dress", image: "product5.jpg", price: "₹1790", url: "product_detail5.html" },
+                { name: "Nap Chief Kids Cotton Disney Co ord Set for Boys & Girls, Tshirt & Joggers Set for Casual Wear", category: "Kids", image: "product3.jpg", price: "₹1049", url: "product_detail3.html" },
+                { name: "Googo Gaaga Boy's Full Sleeves Sweatshirt with Pant Set Baby Boys Clothing Set", category: "Kids", image: "product7.jpg", price: "₹392", url: "product_detail7.html" },
+                { name: "GYMIFIC Sports Training Running Dry Fit Solid Shorts for Men", category: "Shorts", image: "product8.jpg", price: "₹399", url: "product_detail8.html" }
+            ];
+
+            const searchInput = document.getElementById('searchInput');
+            const resultsContainer = document.getElementById('results');
+
+            // Function to get query parameters
+            function getQueryParams() {
+                const params = {};
+                const queryString = window.location.search.substring(1);
+                const regex = /([^&=]+)=([^&]*)/g;
+                let match;
+                while (match = regex.exec(queryString)) {
+                    params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+                }
+                return params;
+            }
+
+            // Display search results based on query
+            function displaySearchResults(query) {
+                resultsContainer.innerHTML = '';
+
+                if (query) {
+                    const filteredProducts = products.filter(product => product.name.toLowerCase().includes(query.toLowerCase()) || product.category.toLowerCase().includes(query.toLowerCase()));
+
+                    if (filteredProducts.length) {
+                        filteredProducts.forEach(product => {
+                            const productElement = document.createElement('div');
+                            productElement.className = 'result-item';
+                            productElement.innerHTML = `
+                                <a href="${product.url}">
+                                    <img src="${product.image}" alt="${product.name}">
+                                    <strong>${product.name}</strong> - ${product.category} - ${product.price}
+                                </a>
+                            `;
+                            resultsContainer.appendChild(productElement);
+                        });
+                    } else {
+                        const noResultElement = document.createElement('div');
+                        noResultElement.className = 'result-item';
+                        noResultElement.textContent = 'No products found.';
+                        resultsContainer.appendChild(noResultElement);
+                    }
+                }
+            }
+
+            // Get query parameters and display results
+            const queryParams = getQueryParams();
+            if (queryParams.query) {
+                searchInput.value = queryParams.query;
+                displaySearchResults(queryParams.query);
+            }
+
+            // Add event listener for real-time search input
+            searchInput.addEventListener('input', function () {
+                displaySearchResults(searchInput.value);
+            });
+        </script>
+    </body>
+
+</html>
